@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "Beldex Meet",
+    "slug": "beldex-meet",
+    "scheme": "beldexmeet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "in.demoapp.beldexmeet",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Beldex Meet uses your camera for video calls.",
+        "NSMicrophoneUsageDescription": "Beldex Meet uses your microphone for audio in calls."
+      }
+    },
+    "android": {
+      "package": "in.demoapp.beldexmeet",
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@livekit/react-native-expo-plugin",
+        { "android": { "enableScreenShareService": true } }
+      ],
+      "@config-plugins/react-native-webrtc"
+    ]
+  }
+}
